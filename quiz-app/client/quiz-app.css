@@ -17,11 +17,11 @@
 }
 
 .card__front {
-  background-color: #ff5078;
+  background-color: #ADFF2F;
 }
 
 .card__back {
-  background-color: #1e1e1e;
+  background-color: #FFA07A;
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
 }

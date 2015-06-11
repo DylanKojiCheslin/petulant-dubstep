@@ -8,3 +8,6 @@ meteor-platform
 autopublish
 insecure
 robodo:masonrify
+aldeed:autoform
+aldeed:collection2
+msavin:mongol
