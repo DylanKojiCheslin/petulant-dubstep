@@ -1,5 +1,18 @@
-<template name="addCard">
+<!-- <template name="addCard">
   <div class="addCard">
     {{> quickForm collection="Card" id="addCardForm" type="insert"}}
+  </div>
+</template> -->
+<template name="addCard">
+  <div class="addCard">
+    {{#autoForm collection="Card" id="addCardForm" type="insert"}}
+      <fieldset>
+        <legend>Add a Card</legend>
+        {{> afQuickField name='question'}}
+        {{> afQuickField name='answer'}}
+        {{> afQuickField name='tags'}}
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Insert</button>
+    {{/autoForm}}
   </div>
 </template>

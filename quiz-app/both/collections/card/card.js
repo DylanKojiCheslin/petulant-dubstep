@@ -12,7 +12,7 @@ CardSchema = new SimpleSchema({
     min: 1
   },
   tags: {
-    type: String,
+    type: [String],
     label: "tags separated by comma",
     max: 300,
     min: 1
