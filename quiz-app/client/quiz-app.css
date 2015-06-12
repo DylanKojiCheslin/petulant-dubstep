@@ -39,3 +39,29 @@
 .bordered {
   border: 2px solid #ccc;
 }
+
+.btn-primary {
+color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+.glyphicon-plus:before {
+  content: "\2b";
+}
+
+.glyphicon-minus:before {
+  content: "\2212";
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
