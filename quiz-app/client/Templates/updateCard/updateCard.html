@@ -1,0 +1,13 @@
+<template name="updateCard">
+  <div class="updateCard">
+    {{#autoForm collection="Card" id="addCardForm" type="update" doc=this}}
+      <fieldset>
+        <legend>Update</legend>
+        {{> afQuickField name='question'}}
+        {{> afQuickField name='answer'}}
+        {{> afQuickField name='tags'}}
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Update</button>
+    {{/autoForm}}
+  </div>
+</template>

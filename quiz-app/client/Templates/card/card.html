@@ -1,13 +1,26 @@
 <template name="card">
   {{#masonryElement "CardsMasonryContainer"}}
-    <div class="card effect__click bordered">
-      <div class="card__front">
-        <span class="card__text">{{question}}</span>
+  <div class="CardAndCardUpdate">
+    <div class="cardOutline">
+      <div class="card effect__click bordered">
+        <div class="card__front">
+          <span class="card__text">{{question}}</span>
+        </div>
+        <div class="card__back">
+          <span class="card__text">{{answer}}</span>
+        </div>
+      <span>Tags: {{tags}}</span>
       </div>
-      <div class="card__back">
-        <span class="card__text">{{answer}}</span>
+      <div class="startEditingCard">
+        <span>Edit</span>
       </div>
-    <span>Tags: {{tags}}</span>
     </div>
+    <div class="cardUpdate">
+      {{> updateCard}}
+      <div class="submitEditCard">
+        <span>submition</span>
+      </div>
+    </div>
+  </div>
     {{/masonryElement}}
 </template>

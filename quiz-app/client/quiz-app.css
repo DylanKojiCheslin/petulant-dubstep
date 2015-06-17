@@ -1,6 +1,6 @@
-/* CSS declarations go here */
+/* card fliping behavaior */
 .card {
-  width: 100px;
+  /*width: 100px;*/
   height: 100px;
 }
 
@@ -45,7 +45,7 @@ color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
 }
-
+/*insertform styles*/
 .glyphicon-plus:before {
   content: "\2b";
 }
@@ -64,4 +64,20 @@ color: #fff;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/*card editing styles*/
+.startEditingCard{
+  background-color: gray;
+}
+
+.cardBeingEdited{
+  background-color: gray;
+}
+
+.cardUpdate{
+  display: none;
+}
+.cardUpdate .list-group-item.autoform-array-item .autoform-array-item-body{
+  width: auto;
 }
