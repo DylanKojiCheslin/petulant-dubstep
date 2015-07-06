@@ -81,3 +81,7 @@ color: #fff;
 .cardUpdate .list-group-item.autoform-array-item .autoform-array-item-body{
   width: auto;
 }
+
+.addCard .list-group-item.autoform-array-item .autoform-array-item-body{
+  width: auto;
+}

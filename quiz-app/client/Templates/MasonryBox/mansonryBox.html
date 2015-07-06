@@ -1,9 +1,7 @@
 <template name="masonryBox">
   {{#masonryContainer columnWidth=115 transitionDuration="0.1s" gutter=1 id="CardsMasonryContainer"}}
     <div class="cardHolder">
-      {{#each Card}}
-          {{> card}}
-      {{/each}}
+      {{> cardHolder}}
     </div>
   {{/masonryContainer}}
 </template>

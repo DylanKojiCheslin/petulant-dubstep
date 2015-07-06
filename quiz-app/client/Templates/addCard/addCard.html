@@ -1,9 +1,5 @@
-<!-- <template name="addCard">
-  <div class="addCard">
-    {{> quickForm collection="Card" id="addCardForm" type="insert"}}
-  </div>
-</template> -->
 <template name="addCard">
+  {{#masonryElement "CardsMasonryContainer"}}
   <div class="addCard">
     {{#autoForm collection="Card" id="addCardForm" type="insert"}}
       <fieldset>
@@ -15,4 +11,5 @@
       <button type="submit" class="btn btn-primary">Insert</button>
     {{/autoForm}}
   </div>
+  {{/masonryElement}}
 </template>
