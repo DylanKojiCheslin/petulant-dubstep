@@ -1,0 +1,9 @@
+<template name="searchByTag">
+  {{> esInput index="card" placeholder="Search Tags" }}
+
+    <ul>
+        {{#esEach index="card"}}
+            {{> card}} - -
+        {{/esEach}}
+    </ul>
+</template>

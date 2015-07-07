@@ -28,3 +28,4 @@ CardSchema = new SimpleSchema({
 
 Card = new Mongo.Collection("Card");
 Card.attachSchema(CardSchema);
+Card.initEasySearch('tags');
