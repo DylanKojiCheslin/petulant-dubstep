@@ -16,6 +16,13 @@ CardSchema = new SimpleSchema({
     label: "Tags",
     max: 300,
     min: 1
+  },
+  addedBy: {
+    type: String,
+    autoValue: function(){
+      if (Meteor.userId()) {return Meteor.user().username;}
+      else {return "anonymous";}
+      }
   }
 });
 
