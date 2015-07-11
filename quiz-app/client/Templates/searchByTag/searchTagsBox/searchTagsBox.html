@@ -1,0 +1,8 @@
+<template name="searchTagsBox">
+  {{> esInput index="card" placeholder="Search Tags" }}
+  <!-- {{#masonryContainer columnWidth=115 transitionDuration="0.1s" gutter=1 id="searchTagsBoxMasonryContainer"}} -->
+        {{#esEach index="card"}}
+            {{> searchResult}} - -
+        {{/esEach}}
+    <!-- {{/masonryContainer}} -->
+</template>

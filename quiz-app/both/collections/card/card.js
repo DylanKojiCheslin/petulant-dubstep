@@ -20,12 +20,32 @@ CardSchema = new SimpleSchema({
   addedBy: {
     type: String,
     autoValue: function(){
-      if (Meteor.userId()) {return Meteor.user().username;}
-      else {return "anonymous";}
+      if (Meteor.userId()) {return Meteor.user().username}
+      else {return "anonymous"}
       }
   }
 });
 
 Card = new Mongo.Collection("Card");
 Card.attachSchema(CardSchema);
-Card.initEasySearch('tags');
+//Card.initEasySearch('tags');
+// EasySearch.createSearchIndex('tags', {
+//    'collection': Card,
+//    'field': "tags",
+//    'limit': 10,
+//    'use' : 'mongo-db'
+//  });
+EasySearch.createSearchIndex('tags', {
+  'field' : 'tags',
+  'collection' : Card,
+  // 'limit' : 20,
+  'use' : 'mongo-db',
+  'props' : {
+  'query' : function (searchString, opts) {
+    // Default query
+    var query = EasySearch.getSearcher(this.use).defaultQuery(this, searchString);
+
+    return query;
+    }
+  }
+});
