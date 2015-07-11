@@ -23,6 +23,12 @@ CardSchema = new SimpleSchema({
       if (Meteor.userId()) {return Meteor.user().username}
       else {return "anonymous"}
       }
+  },
+  difficulty: {
+    type: Number,
+    lavel: "Difficulty on a scale of 1 to 100",
+    max: 100,
+    min: 1,
   }
 });
 
