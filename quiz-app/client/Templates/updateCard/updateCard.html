@@ -1,6 +1,6 @@
 <template name="updateCard">
   <div class="updateCard">
-    {{#autoForm collection="Card" id="updateCardForm" type="update" doc=this}}
+    {{#autoForm collection="Card" id="updateCardForm" type="update"  doc=selectedCardDoc}}
       <fieldset>
         <legend>Update</legend>
         {{> afQuickField name='question'}}

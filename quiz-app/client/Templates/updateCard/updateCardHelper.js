@@ -1,6 +1,5 @@
 Template.updateCard.helpers({
-
-  Card: function () {
-    return Card.findOne({_id: this.params._id});
+  selectedCardDoc: function () {
+    return Card.findOne(Session.get("selectedCardId"));
   }
 });
