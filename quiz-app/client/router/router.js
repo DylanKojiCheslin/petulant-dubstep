@@ -1,4 +1,4 @@
-Router.route('/', 'searchTagsBox');
+Router.route('/', 'searchTagsResultsBox');
 
 Router.configure({
   layoutTemplate: 'main'
