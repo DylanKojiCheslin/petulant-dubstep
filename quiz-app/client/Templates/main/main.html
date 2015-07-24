@@ -1,0 +1,29 @@
+<template name="main">
+  <head>
+    <title>Quiz App</title>
+  </head>
+  <div class="container">
+    <div class="login">
+      {{> loginButtons}}
+    </div>
+
+
+    <div class="container">
+      <div class="addUpdateArea">
+        <div class="minimizedSearchArea">
+        </div>
+        <div class="fullAddUpdateArea">
+          {{>addCard}}
+        </div>
+      </div>
+      <div class="searchArea">
+        <div class="minimizedSearchArea">
+        </div>
+        <div class="fullSearchArea">
+          {{> esInput index="tags" placeholder="Search Tags" }}
+        </div>
+      </div>
+  </div>
+      {{> yield}}
+  </div>
+</template>
