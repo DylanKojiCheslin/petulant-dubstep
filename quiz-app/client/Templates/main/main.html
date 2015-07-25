@@ -6,8 +6,6 @@
     <div class="login">
       {{> loginButtons}}
     </div>
-
-
     <div class="container">
       <div class="addUpdateArea">
         <div class="minimizedSearchArea">
@@ -20,11 +18,7 @@
         </div>
       </div>
       <div class="searchArea">
-        <div class="minimizedSearchArea">
-        </div>
-        <div class="fullSearchArea">
-          {{> esInput index="tags" placeholder="Search Tags" }}
-        </div>
+        {{> esInput index="tags" placeholder="Search Cards by Tag" }}
       </div>
   </div>
       {{> yield}}

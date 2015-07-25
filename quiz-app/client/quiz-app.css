@@ -71,10 +71,6 @@ color: #fff;
   background-color: gray;
 }
 
-.cardBeingEdited{
-  background-color: gray;
-}
-
 .cardUpdate{
   display: none;
 }
