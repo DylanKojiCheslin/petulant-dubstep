@@ -71,6 +71,10 @@ color: #fff;
   background-color: gray;
 }
 
+.cardBeingEdied{
+  background-color: gray;
+}
+
 .cardUpdate{
   display: none;
 }
@@ -80,4 +84,8 @@ color: #fff;
 
 .addCard .list-group-item.autoform-array-item .autoform-array-item-body{
   width: auto;
+}
+
+.form-control{
+  width: 20em;
 }

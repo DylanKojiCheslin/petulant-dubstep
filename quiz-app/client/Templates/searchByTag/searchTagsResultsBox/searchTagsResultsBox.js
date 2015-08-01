@@ -4,3 +4,11 @@ Template.searchTagsResultsBox.events({
     Session.set("selectedCardId", this._id);
   }
 });
+
+//
+// Tracker.autorun(function () {
+//   Session.get('selectedCardId');
+//   function(){
+//
+//   };
+// });

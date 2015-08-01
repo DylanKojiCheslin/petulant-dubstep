@@ -1,24 +1,24 @@
 <template name="card">
-  <div class="CardAndCardUpdate">
-    <div class="cardOutline">
-      <div class="card effect__click bordered">
-        <div class="card__front">
-          <span class="card__text">{{question}}</span>
-        </div>
-        <div class="card__back">
-          <span class="card__text">{{answer}}</span>
-        </div>
-      <span>Tags: {{tags}}</span>
+  <div class="cardOutline">
+    <div class="card effect__click bordered">
+      <div class="card__front">
+        <span class="card__text">{{question}}</span>
       </div>
-      <div class="difficultyLabel">
-        <span>{{difficulty}}</span>
+      <div class="card__back">
+        <span class="card__text">{{answer}}</span>
       </div>
-      <div class="startEditingCard">
-        <span>Edit</span>
-      </div>
-      <div class="submitedBy">
-        <span>Submited By: {{addedBy}}</span>
-      </div>
+    <span>Tags: {{tags}}</span>
+    </div>
+    <div class="difficultyLabel">
+      <span>{{difficulty}}</span>
+    </div>
+    {{#unless cardIsSelected}}
+    <div class="startEditingCard">
+      <span>Edit</span>
+    </div>
+    {{/unless}}
+    <div class="submitedBy">
+      <span>Submited By: {{addedBy}}</span>
     </div>
   </div>
 </template>
