@@ -28,30 +28,30 @@ CardSchema = new SimpleSchema({
     type: Number,
     label: "Difficulty on a scale of 1 to 100",
     max: 100,
-    min: 1,
+    min: 1
   }
 });
 
 Card = new Mongo.Collection("Card");
 Card.attachSchema(CardSchema);
-//Card.initEasySearch('tags');
-// EasySearch.createSearchIndex('tags', {
-//    'collection': Card,
-//    'field': "tags",
-//    'limit': 10,
-//    'use' : 'mongo-db'
-//  });
+
 EasySearch.createSearchIndex('tags', {
   'field' : 'tags',
   'collection' : Card,
-  // 'limit' : 20,
   'use' : 'mongo-db',
   'props' : {
+    upperDifficultyLimit : 0,
+    lowerDifficultyLimit : 0
+  },
   'query' : function (searchString, opts) {
     // Default query
     var query = EasySearch.getSearcher(this.use).defaultQuery(this, searchString);
-
+    if (this.props.lowerDifficultyLimit) {
+      query.difficulty = {$gt: this.props.lowerDifficultyLimit};
+    }
+    if (this.props.upperDifficultyLimit) {
+      query.difficulty = {$lt: this.props.upperDifficultyLimit};
+    }
     return query;
     }
-  }
 });
